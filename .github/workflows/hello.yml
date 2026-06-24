@@ -22,3 +22,9 @@ jobs:
 
       - name: using env
         run: echo $App_name
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: running this from second job
+        run: echo "from second job"
