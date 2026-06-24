@@ -1,7 +1,8 @@
 name: first workflow
 
 on:
-  workflow_dispatch:
+  push
+  #workflow_dispatch:
 
 env: 
   App_name: roboshop
