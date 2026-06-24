@@ -3,6 +3,9 @@ name: first workflow
 on:
   workflow_dispatch:
 
+env: 
+  App_name: roboshop
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,3 +19,6 @@ jobs:
           pwd
           hostname
           whoami
+
+      - name: using env
+        run: echo $App_name
