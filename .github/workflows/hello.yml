@@ -23,6 +23,7 @@ jobs:
       - name: using env
         run: echo $App_name
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
