@@ -10,3 +10,9 @@ jobs:
     steps:
       - name: Hello this is my first script
         run: echo "Hello from GitHub Actions"
+
+      - name: printing date,hostname
+        run: |
+          pwd
+          hostname
+          whoami
