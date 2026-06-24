@@ -46,3 +46,19 @@ jobs:
     steps:
       - name: printing context
         run: echo " ${{ toJson(github) }}"
+  
+  job_context:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: printing context
+        run: echo " ${{ toJson(job) }}"
+
+  runner_context:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: printing context
+        run: echo " ${{ toJson(github) }}"
