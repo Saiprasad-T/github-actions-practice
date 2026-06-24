@@ -22,8 +22,17 @@ jobs:
 
       - name: using env
         run: echo $App_name
-  deploy:
+      
+  test:
     needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: testing need
+        run: echo "testing is working successfully"
+
+  deploy:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
