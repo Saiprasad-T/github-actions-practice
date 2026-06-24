@@ -38,3 +38,11 @@ jobs:
     steps:
       - name: running this from second job
         run: echo "from second job"
+  
+  Github_context:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: printing context
+        run: echo " ${{ toJson(github) }}"
